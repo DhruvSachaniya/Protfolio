@@ -402,3 +402,7 @@ img, video {
     height: 200px;
     width: 200px;
 }
+
+.pricing-colom {
+    padding: 3% 2%;
+}
