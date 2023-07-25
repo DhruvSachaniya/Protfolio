@@ -272,6 +272,11 @@ img, video {
     height: 5rem;
     width: 5rem;
     margin: 20px;
+    transition: transform 1s;
+}
+
+.techimg:hover {
+    transform: scale(1.3);
 }
 
 /* footer */
