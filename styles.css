@@ -11,7 +11,7 @@ body {
         --color-bg-2: #f98e4a;
         --color-link: #317bd0;
         --color-link-hover: #317bd0;
-        /* background: radial-gradient(ellipse at 100% 0,#fed96f 0,var(--color-bg) 50%,var(--color-bg-2) 115%); */
+        background: radial-gradient(ellipse at 100% 0,#fed96f 0,var(--color-bg) 50%,var(--color-bg-2) 115%);
         overflow-x: hidden;
 }
 
@@ -20,10 +20,6 @@ h1, h2, .font-marker {
 /* font-family: 'Work Sans', sans-serif; */
 }
 
-#header {
-    background: radial-gradient(ellipse at 100% 0,#fed96f 0,var(--color-bg) 50%,var(--color-bg-2) 115%);
-
-}
 
 .container-md, .container-sm, .container-xl, .container-xxl {
     --bs-gutter-x: 1.5rem;
