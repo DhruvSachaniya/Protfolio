@@ -1,3 +1,67 @@
+.hero {
+  background: #f98e4a; /* your theme color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hero-img {
+  mix-blend-mode: multiply;
+  filter: brightness(0) invert(1); /* optional: makes whites transparent */
+  max-width: 600px;
+}
+
+/* Hide default scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  overflow-y: scroll;
+}
+
+/* Custom scrollbar track */
+#iron-scrollbar {
+  position: fixed;
+  right: 10px;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: rgba(183, 28, 28, 0.3); /* Iron Man red glow */
+  border-radius: 10px;
+}
+
+/* Scroll thumb */
+#iron-scroll-thumb {
+  position: absolute;
+  top: 0;
+  width: 6px;
+  height: 80px;
+  background: linear-gradient(to bottom, #ffd700, #b71c1c); /* gold → red */
+  border-radius: 10px;
+}
+
+/* Sparks container */
+#sparks {
+  position: fixed;
+  right: 20px;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.spark {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #ffd700;
+  border-radius: 50%;
+  opacity: 0.8;
+  filter: blur(1px);
+}
+
 /* Timeline Experience Section */
 .timeline {
   position: relative;
@@ -88,13 +152,37 @@ body {
   --color-bg-2: #f98e4a;
   --color-link: #317bd0;
   --color-link-hover: #317bd0;
-  background: radial-gradient(
+  /* background: radial-gradient(
     ellipse at 100% 0,
     #fed96f 0,
     var(--color-bg) 50%,
     var(--color-bg-2) 115%
-  );
+  ); */
+  background: linear-gradient(135deg, #b71c1c 0%, #a80000 35%, #f4c542 100%);
   overflow-x: hidden;
+}
+
+#header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay for contrast */
+  z-index: 1;
+}
+
+#header > div {
+  position: relative;
+  z-index: 2;
+}
+
+.ironman-title {
+  color: #ffd700; /* Gold */
+  text-shadow: 0 0 10px #a80000, 0 0 20px #a80000;
+}
+
+.ironman-subtitle {
+  color: #ffd700; /* Arc reactor cyan */
+  text-shadow: 0 0 12px #00e5ff, 0 0 24px #00e5ff;
 }
 
 h1,
@@ -118,6 +206,9 @@ h2,
 }
 
 /* header */
+#header {
+  mix-blend-mode: multiply;
+}
 .container-fluid {
   padding-top: 5%;
   font-family: "zantrokeregular", serif;
@@ -160,6 +251,8 @@ h2,
 /* text */
 .tracking-wider {
   letter-spacing: 0.05em;
+  color: #00e5ff; /* Arc reactor glow */
+  text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
 }
 
 .font-bold {
@@ -288,8 +381,9 @@ h2,
 }
 
 .bg-yellow-400 {
+  background: linear-gradient(145deg, #ffd700 0%, #f4c542 50%, #e6b800 100%);
   --tw-bg-opacity: 1;
-  background-color: rgb(254 217 111 / var(--tw-bg-opacity));
+  color: #1a1a1a; /* Dark text for contrast */
 }
 
 .px-4 {
